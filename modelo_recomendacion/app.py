@@ -3,6 +3,9 @@ import pandas as pd
 import re
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
+import os
+os.environ["TRANSFORMERS_CACHE"] = "./model_cache"
+
 
 # Cargar modelo NLP
 modelo_nlp = SentenceTransformer('distiluse-base-multilingual-cased-v2')
