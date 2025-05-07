@@ -10,7 +10,6 @@ from sentence_transformers import SentenceTransformer
 import torch
 
 modelo_nlp = SentenceTransformer('./model_cache')
-modelo_nlp.to(torch.device("cpu"))  # Fuerza el uso de CPU
 
 
 # Configuración general de la app
