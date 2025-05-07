@@ -1,5 +1,0 @@
-model_cache/model.safetensors filter=lfs diff=lfs merge=lfs -text
-git add .gitattributes
-git add model_cache/
-git commit -m "Subir modelo con Git LFS"
-git push origin main
