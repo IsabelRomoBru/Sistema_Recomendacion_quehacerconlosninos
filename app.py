@@ -6,9 +6,12 @@ from sentence_transformers import SentenceTransformer
 import os
 os.environ["TRANSFORMERS_CACHE"] = "./model_cache"
 
+from sentence_transformers import SentenceTransformer
+import torch
 
-# Cargar modelo NLP
-modelo_nlp = SentenceTransformer('distiluse-base-multilingual-cased-v2')
+modelo_nlp = SentenceTransformer('./model_cache')
+modelo_nlp.to(torch.device("cpu"))  # Fuerza el uso de CPU
+
 
 # Configuración general de la app
 st.set_page_config(
